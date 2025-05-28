@@ -97,7 +97,10 @@ function App() {
           <div className="experience-item card">
             <div className="card-header">
               <span className="card-icon">🤖</span>
-              <h3><span className="highlight-role">AI/ML Intern</span></h3>
+              <div>
+                <h3><span className="highlight-role">Astraeus Next Gen Pvt. Ltd.</span></h3>
+                <h3><span className="highlight-role">AI/ML Intern</span></h3>
+              </div>
             </div>
             <div className="card-meta">
               <span className="card-date">February 2025 - April 2025</span>
