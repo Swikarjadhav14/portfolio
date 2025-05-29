@@ -6,6 +6,7 @@ function App() {
   const [visibleSections, setVisibleSections] = useState({});
   const menuRef = useRef(null);
   const hamburgerRef = useRef(null);
+  const [selectedProject, setSelectedProject] = useState(null);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -44,6 +45,10 @@ function App() {
 
     return () => observer.disconnect();
   }, []);
+
+  const openDemo = (projectName) => {
+    setSelectedProject(projectName);
+  };
 
   return (
     <div className="App">
@@ -111,6 +116,9 @@ function App() {
               <li>Achieved <span className="highlight">90% accuracy</span> in face and speaker recognition by integrating <span className="highlight">DeepFace</span>, <span className="highlight">WAV2VEC</span>, and audio-CCTV stream analysis.</li>
               <li>Built <span className="highlight">IP tracking</span>, <span className="highlight">OSINT profiling</span>, and <span className="highlight">zero-click exploit</span> modules to support national security system.</li>
             </ul>
+            <div style={{ textAlign: 'center', marginTop: '20px' }}>
+              <a href="/letter.pdf" className="btn highlight-tech">Download Completion Letter</a>
+            </div>
           </div>
         </div>
       </section>
@@ -131,6 +139,7 @@ function App() {
               <li>Created a <span className="highlight">ticketing system</span> for unresolved queries, with tickets reviewed and addressed by an <span className="highlight">admin panel</span>.</li>
               <li>Built an interactive web application using <span className="highlight-tech">React.js</span> and <span className="highlight-tech">MongoDB</span>, and integrated the chatbot as a plugin for various websites.</li>
             </ul>
+            <button onClick={() => openDemo('SocioBot')} className="btn highlight-tech">Watch Demo</button>
           </div>
           <div className="project-item card">
             <div className="card-header">
@@ -145,6 +154,7 @@ function App() {
               <li>Integrated robust <span className="highlight">code compilation</span> for C++, C, Python, and Java, allowing users to compile and test code within the platform.</li>
               <li>Implemented <span className="highlight">real-time code synchronization</span> using <span className="highlight-tech">WebSockets</span> and <span className="highlight-tech">Socket.IO</span>, ensuring instant visibility of changes.</li>
             </ul>
+            <button onClick={() => openDemo('CodeSync')} className="btn highlight-tech">Watch Demo</button>
           </div>
           <div className="project-item card">
             <div className="card-header">
@@ -159,6 +169,7 @@ function App() {
               <li>Computes <span className="highlight">p-values</span> and <span className="highlight">correlation matrix</span> to determine the significance and relationships between loan factors.</li>
               <li>Provides an overall <span className="highlight">loan approval decision</span> with factor-wise risk contributions for smarter financial strategies.</li>
             </ul>
+            <button onClick={() => openDemo('Loan Risk Analysis')} className="btn highlight-tech">Watch Demo</button>
           </div>
           <div className="project-item card">
             <div className="card-header">
@@ -173,6 +184,7 @@ function App() {
               <li>Implemented <span className="highlight">real-time tracking</span> with <span className="highlight">30 FPS</span> processing speed and <span className="highlight">multi-face detection</span> capability supporting up to 10 simultaneous recognitions.</li>
               <li>Created an intuitive <span className="highlight">GUI dashboard</span> with <span className="highlight">attendance analytics</span>, <span className="highlight">export functionality</span>, and <span className="highlight">automated email reports</span> for seamless management.</li>
             </ul>
+            <button onClick={() => openDemo('Face Recognition Attendance System')} className="btn highlight-tech">Watch Demo</button>
           </div>
         </div>
       </section>
@@ -358,6 +370,19 @@ function App() {
           </div>
         </div>
       </section>
+
+      {selectedProject && (
+        <div className="modal">
+          <div className="modal-content">
+            <span className="close" onClick={() => setSelectedProject(null)}>&times;</span>
+            <h2>{selectedProject} Demo</h2>
+            <video controls>
+              <source src={`/demos/project${selectedProject === 'SocioBot' ? '1' : selectedProject === 'CodeSync' ? '2' : selectedProject === 'Loan Risk Analysis' ? '3' : '4'}.mp4`} type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
