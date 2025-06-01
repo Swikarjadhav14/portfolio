@@ -333,7 +333,7 @@ function App() {
                   <path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/>
                 </svg>
               </span>
-              <a href="https://leetcode.com/u/swikarj" target="_blank" rel="noopener noreferrer" className="highlight-tech">LeetCode</a>
+              <a href="https://leetcode.com/u/SJ298" target="_blank" rel="noopener noreferrer" className="highlight-tech">LeetCode</a>
             </div>
             <div className="card-header">
               <span className="card-icon">
