@@ -1216,7 +1216,7 @@ video {
 
 /* Add or modify style for experience item card to make it wider */
 .experience-item.card {
-  max-width: 770px; /* Set max-width */
+  max-width: 500px; /* Set max-width */
   margin: 20px auto;
   padding: 20px;
   background-color: #fff;
