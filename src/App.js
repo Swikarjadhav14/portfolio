@@ -335,14 +335,6 @@ function App() {
               </span>
               <a href="https://leetcode.com/u/SJ298" target="_blank" rel="noopener noreferrer" className="highlight-tech">LeetCode</a>
             </div>
-            <div className="card-header">
-              <span className="card-icon">
-                <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
-                </svg>
-              </span>
-              <a href="https://www.codechef.com/users/sj298" target="_blank" rel="noopener noreferrer" className="highlight-tech">CodeChef</a>
-            </div>
           </div>
         </div>
       </section>
