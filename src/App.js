@@ -341,7 +341,7 @@ function App() {
                   <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
                 </svg>
               </span>
-              <a href="https://www.codechef.com/users/creeperr" target="_blank" rel="noopener noreferrer" className="highlight-tech">CodeChef</a>
+              <a href="https://www.codechef.com/users/SJ298" target="_blank" rel="noopener noreferrer" className="highlight-tech">CodeChef</a>
             </div>
           </div>
         </div>
